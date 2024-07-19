@@ -1,0 +1,11 @@
+.display {
+    padding: .75rem;
+    margin-bottom: 1rem;
+    border: 2px solid #c79655;
+    border-radius: .5rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
