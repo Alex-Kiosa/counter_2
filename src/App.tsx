@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import {Settings} from "./components/settings/Settings";
 import {Counter} from "./components/counter/Counter";
-import {Button} from "./components/button/Button";
 
 function App() {
     let startValueFromLocalStorage = localStorage.getItem('savedStartValue') || 0
@@ -57,6 +56,10 @@ function App() {
         setEditMode(false)
     }
 
+    const toggleEditModeHandler = () => {
+        setEditMode(!editMode)
+    }
+
     const setDefaultHandler = () => {
         localStorage.removeItem('savedStartValue')
         localStorage.removeItem('savedMaxValue')
@@ -67,20 +70,15 @@ function App() {
     if (!editMode) {
         return (
             <div className="App">
-                <div className="display">
-                    <Counter
-                        count={count}
-                        startValue={count}
-                        maxValue={maxValue}
-                        tooltip={tooltip}
-                        error={error}
-                    />
-                </div>
-                <div className="buttons">
-                    <Button disabled={count === maxValue || !!tooltip} onclick={counterIncHandler} value={'inc'}/>
-                    <Button disabled={!!tooltip} onclick={counterResetHandler} value={'reset'}/>
-                    <Button disabled={!!tooltip} onclick={() => setEditMode(!editMode)} value={'settings'}/>
-                </div>
+                <Counter
+                    count={count}
+                    maxValue={maxValue}
+                    tooltip={tooltip}
+                    error={error}
+                    counterInc={counterIncHandler}
+                    counterReset={counterResetHandler}
+                    toggleEditMode={toggleEditModeHandler}
+                />
             </div>
         );
     }

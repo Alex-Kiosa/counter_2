@@ -7,5 +7,8 @@
 
 .buttons {
     display: flex;
-    justify-content: space-around;
+    padding: .75rem;
+    justify-content: space-between;
+    border: 2px solid #c79655;
+    border-radius: .5rem;
 }

@@ -37,18 +37,3 @@ html {
     transform: rotate(360deg);
   }
 }
-
-.display {
-  padding: .75rem;
-  margin-bottom: 1rem;
-  border: 2px solid #c79655;
-  border-radius: .5rem;
-}
-
-.buttons {
-  display: flex;
-  padding: .75rem;
-  justify-content: space-between;
-  border: 2px solid #c79655;
-  border-radius: .5rem;
-}

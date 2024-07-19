@@ -1,12 +1,19 @@
-.wrap {
-
-}
-
 .display {
+    padding: .75rem;
     margin-bottom: 1rem;
-    font-weight: 700;
+    border: 2px solid #c79655;
+    border-radius: .5rem;
+    font-weight: bold;
 }
 
 .display_red {
     color: red;
+}
+
+.buttons {
+    display: flex;
+    padding: .75rem;
+    justify-content: space-between;
+    border: 2px solid #c79655;
+    border-radius: .5rem;
 }
